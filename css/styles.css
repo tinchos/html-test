@@ -1,0 +1,150 @@
+/* Estilos básicos para el cuerpo y el formulario si no los tienes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Permite que el main ocupe el espacio disponible */
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Ancho completo menos padding y borde */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: solid;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #fa1905;
+}
+
+/* Estilos para el pop-up */
+.popup {
+    display: none; /* <-- This is correct for default hiding */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    /* REMOVE THIS LINE: display: flex;  <-- This was causing the issue */
+    justify-content: center; /* These are still good to keep for when it becomes flex */
+    align-items: center;   /* These are still good to keep for when it becomes flex */
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: auto; /* Centrado automático */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del pop-up */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 10px;
+    position: relative; /* Para posicionar el botón de cerrar */
+    text-align: center; /* Centrar el texto del mensaje */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-out; /* Animación de aparición */
+}
+/* Nueva clase para mostrar el pop-up */
+.popup.show {
+    display: flex; /* Ahora, solo cuando se añade la clase 'show' */
+}
+
+.close-button {
+    color: #aaa;
+    float: right; /* Alinea el botón de cerrar a la derecha */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animación para que el pop-up aparezca suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+header {
+    background-color: #52a4e2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+/* Puedes agregar estilos para el footer si no los tienes */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+footer a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#aboutTitle { /* <-- El selector de ID */
+    color: #0056b3; /* Un color azul oscuro */
+    font-size: 2.5em; /* Un tamaño de fuente más grande */
+    text-align: center; /* Centrar el texto */
+    margin-top: 40px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+    border-bottom: 2px solid #007bff; /* Una línea debajo del título */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}

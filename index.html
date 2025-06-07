@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-</body>
+  <head>
+    <title>Web de prueba</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Pagina Principal</h1>
+    </header>
+    <main> 
+      <h2>Datos Personales</h2>
+      <p>complete los casilleros</p>
+      <form id="saludoForm">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido">
+        <button type="submit">Saludar</button>
+      </form>
+      <h2>Imagen de ArgoCD</h2>
+      <p>este es el logo de ArgoCD</p>
+      <img src="/images/Argo CD.png" alt="W3Schools.com" width="128" height="128">
+      <p><a href="pages/about.html">Acerca de nosotros</a></p>
+    </main>
+    <footer>
+      <p>&copy; 2025 Mi Sitio Web de prueba </p>
+    </footer>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-button" id="closePopup">&times;</span>
+        <p id="popupMessage"></p>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
